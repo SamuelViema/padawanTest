@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login - Evaluación Padawan</title>
+    <link rel="icon" href="https://digitalignition.com.mx/assets/img/di-logo-main.png">
+    <!--Inicio CSS-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Fin CSS-->
+</head>
+
+<body>
+    <!--Inicio Nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div>
+            <a class="navbar-brand" href="Controller?action=list">
+                <img src="https://digitalignition.com.mx/assets/img/di-logo-main.png" width="40px" />
+                Evaluación Padawan
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <!-- <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user-circle fa-lg"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        
+                        <a class="dropdown-item" href="Controller?action=logOut">Cerrar Sesión</a>
+                        <a class="dropdown-item" href="Controller?action=sendToLogin">Iniciar Sesión</a>
+                        </c:choose>
+                        
+                    </div>
+                </li>
+            </ul>
+        </div> -->
+    </nav>
+    <!--Fin Nav bar-->
+    <!--Inicio Main-->
+    <main class="container">
+        <div class="row justify-content-center">
+            <!--Inicio Mostrar Cantidad de Libros-->
+            <!-- <c:choose>
+                    <c:when test="${(5 * currentPage) > noOfRecords}">
+                        <span>${(5 * currentPage) - 4}-${noOfRecords} de ${noOfRecords}</span>
+                    </c:when>
+                    <c:otherwise>
+                        <span>${(5 * currentPage) - 4}-${5 * currentPage} de ${noOfRecords}</span>
+                    </c:otherwise>
+                </c:choose> -->
+            <!--Fin Mostrar Cantidad de Libros-->
+        </div>
+        <div class="row d-flex justify-content-between" style="margin-bottom: 20px">
+            <!--Inicio Paginación Sup-->
+            <div class="container">
+                <nav aria-label="Page navigation">
+                    <center>
+                        <ul class="pagination" id="pagination1"></ul>
+                    </center>
+                </nav>
+            </div>
+            <!--Fin Paginación Sup-->
+        </div>
+        <!--Inicio Mostrar Libros-->
+        <div class="row rowCard">
+            <div id="booksList" class="col-md-8">
+                <!-- <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="http://data.ecasals.net/img/04/g/9788498258097_04_g.jpg"
+                                class="card-img img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body d-flex flex-column">
+                                <div>
+                                    <p class="card-text">
+                                        <small class="text-muted">A-0010-Z</small>
+                                    </p>
+                                    <h1>Maze Runner - Virus Letal</h1>
+                                    <h6><strong>Autor:</strong> James Dashner</h6>
+                                </div>
+                                <div class="d-flex bd-highlight mb-3 mt-auto">
+                                    <div class="p-2 bd-highlight">
+                                        <p class="card-text">
+                                            <small class="text-muted"><strong>Fecha de
+                                                    publicación:</strong>2009-10-06</small>
+                                        </p>
+                                    </div>
+                                    <div class="ml-auto p-2 bd-highlight">
+                                        <a class="btn btn-danger" href="#">Borrar</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col-md-4">
+                <h3>Registrar Libro</h3>
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input id="isbn" type="text" name="isbn" class="form-control"></input>
+                </div>
+                <div class="form-group">
+                    <label for="title">Título:</label>
+                    <input id="title" type="text" name="title" class="form-control"></input>
+                </div>
+                <div class="form-group">
+                    <label for="author">Autor:</label>
+                    <input id="author" type="text" name="author" class="form-control"></input>
+                </div>
+                <div class="form-group">
+                    <label for="release_date">Fecha de publicación:</label>
+                    <input id="release_date" type="text" name="release_date" class="form-control"></input>
+                </div>
+                <button id="addBook" name="action" class="btn btn-primary btn-block align-self-end">Agregar
+                    Libro</button>
+                <br>
+                <div id="msgSuccess" class="alert alert-success" role="alert">
+                    Se agregó con éxito
+                </div>
+                <div id="msgFail" class="alert alert-danger" role="alert">
+                    Ocurrió un error
+                </div>
+            </div>
+        </div>
+        <!--Fin Mostrar Libros-->
+        <div class="row d-flex justify-content-between">
+            <!--Inicio Paginación Inf-->
+            <div class="container">
+                <nav aria-label="Page navigation">
+                    <center>
+                        <ul class="pagination" id="pagination2"></ul>
+                    </center>
+                </nav>
+            </div>
+            <!--Fin Paginación Inf-->
+        </div>
+    </main>
+    <!--Fin Main-->
+    <!--Inicio Scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/books.js"></script>
+    <!--Fin Scripts-->
+</body>
+
+</html>

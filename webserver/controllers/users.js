@@ -8,7 +8,7 @@ var controller = {
 
     //Insertar nuevo usuario
     insertUser: (req, res) => {
-        let con = require('../controllers/dbconn')();
+        let con = require('./dbconn')();
 
         //Obtener parametros POST
         let { name, email, password } = req.body;
@@ -49,7 +49,7 @@ var controller = {
     },
 
     logIn: (req, res) => {
-        let con = require('../controllers/dbconn')();
+        let con = require('./dbconn')();
         let jwt = require('jsonwebtoken');
 
         //Obtener parametros POST

@@ -1,7 +1,7 @@
 module.exports = function (req, res, next) {
     let jwt = require('jsonwebtoken');
     //Obtener parametro del Header
-    const token = req.headers['access-token'];
+    const token = req.body.token;
 
     //Verificar que exita el token
     if (token) {

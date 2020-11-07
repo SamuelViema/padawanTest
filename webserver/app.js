@@ -27,6 +27,12 @@ app.use((req, res, next) => {
 
 /* Añadir prefijos a rutas / Cargar rutas */
 
+app.get('/', (req, res) => {
+    return res.status(200).send({
+        message: 'get to /'
+    });
+});
+
 app.use('/books', booksRoutes);
 app.use('/auth', usersRoutes);
 

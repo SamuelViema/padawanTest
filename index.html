@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login - Evaluación Padawan</title>
+    <link rel="icon" href="https://digitalignition.com.mx/assets/img/di-logo-main.png">
+    <!--Inicio CSS-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Fin CSS-->
+</head>
+
+<body>
+    <!--Inicio Nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div>
+            <a class="navbar-brand" href="Controller?action=list">
+                <img src="https://digitalignition.com.mx/assets/img/di-logo-main.png" width="40px" />
+                Evaluación Padawan
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <!--Fin Nav bar-->
+    <!--Inicio Main-->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="card col-md-5">
+                <div class="card-body">
+                    <!--Inicio Formulario LogIn-->
+                    <h1 class="text-center">Registro</h1>
+                    <div class="form-group text-center">
+                        <img src="https://digitalignition.com.mx/assets/img/di-logo-main.png" width="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailSign">Usuario:</label>
+                        <input id="emailSign" type="text" name="emailSign" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordSign">Contraseña:</label>
+                        <input id="passwordSign" type="password" name="passwordSign" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input id="name" type="name" name="name" class="form-control"></input>
+                    </div>
+                    <button id="signin" name="action"
+                        class="btn btn-primary btn-block">Registrarse</button>
+                    <!--Fin Formulario LogIn-->
+                </div>
+                <div id="msgSuccess" class="alert alert-success" role="alert">
+                    Se registro con éxito
+                </div>
+                <div id="msgFail" class="alert alert-danger" role="alert">
+                    Ocurrió un error
+                </div>
+            </div>
+            <div class="card col-md-5 offset-md-1">
+                <div class="card-body">
+                    <!--Inicio Formulario LogIn-->
+                    <h1 class="text-center">Iniciar Sesión</h1>
+                    <div class="form-group text-center">
+                        <img src="https://digitalignition.com.mx/assets/img/di-logo-main.png" width="200">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Usuario:</label>
+                        <input id="email" type="text" name="email" class="form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input id="password" type="password" name="password" class="form-control"></input>
+                    </div>
+                    <button id="login" name="action"
+                        class="btn btn-primary btn-block align-self-end">Iniciar Sesión</button>
+                    <!--Fin Formulario LogIn-->
+                </div>
+                <div id="msgFailLogin" class="alert alert-danger" role="alert">
+                    Credenciales incorrectas
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Main-->
+    <!--Inicio Scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <!--Fin Scripts-->
+</body>
+
+</html>

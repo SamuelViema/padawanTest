@@ -8,7 +8,7 @@ var controller = {
 
     //Insertar libro
     insertBook: (req, res) => {
-        let con = require('../controllers/dbconn')();
+        let con = require('./dbconn')();
 
         //Obtener parametros POST
         let { isbn, title, author, release_date } = req.body;
@@ -42,7 +42,7 @@ var controller = {
 
     //Consultar todos los libros
     getBooks: (req, res) => {
-        let con = require('../controllers/dbconn')();
+        let con = require('./dbconn')();
 
         let qry = "SELECT B.*, U.name FROM `books` B INNER JOIN users U ON B.users_id = U.id;";
         let values = [];
@@ -69,7 +69,7 @@ var controller = {
 
     //Eliminar book por id
     deleteBook: (req, res) => {
-        let con = require('../controllers/dbconn')();
+        let con = require('./dbconn')();
 
         //Obtener parametros GET
         var id = req.params.id

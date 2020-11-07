@@ -13,8 +13,8 @@ router.get('/test', booksController.test);
 
 /* Use Routes */
 
+router.get('/', booksController.getBooks);
 router.post('/', tokenAccess, booksController.insertBook);
 router.delete('/:id', tokenAccess, booksController.deleteBook);
-router.get('/', booksController.getBooks);
 
 module.exports = router;
